@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Mohammed Arshid, a data scientist (fresher) working with machine learning, NLP and Generative AI.">
+<meta name="theme-color" content="#07070d">
+<title>Mohammed Arshid · Data Science &amp; Generative AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070d;--fg:#eceaf6;--mut:#9a98b3;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.1);--a:#8b7bff;--b:#3ee8c4;--c:#ff7ad9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f5fb;--fg:#17152b;--mut:#5d5b78;--card:rgba(20,10,60,.04);--line:rgba(20,10,60,.12);--a:#5b47ff;--b:#0aa688;--c:#d4309f}}
+:root[data-theme="light"]{--bg:#f6f5fb;--fg:#17152b;--mut:#5d5b78;--card:rgba(20,10,60,.04);--line:rgba(20,10,60,.12);--a:#5b47ff;--b:#0aa688;--c:#d4309f}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.logo{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:-.02em}
+#net{position:fixed;inset:0;z-index:0;opacity:.7}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,var(--a),transparent 65%);opacity:.18;pointer-events:none;transform:translate(-50%,-50%);z-index:0}
+main,header,footer{position:relative;z-index:1}
+nav{position:sticky;top:env(safe-area-inset-top,0px);display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 60%,transparent);border-bottom:1px solid var(--line);z-index:5}
+nav a{color:var(--mut);text-decoration:none;margin-left:22px;font-size:14px;transition:color .2s}
+nav a:hover{color:var(--fg)}
+.logo{font-weight:700;color:var(--fg)!important;margin:0!important}
+section{padding:96px 5vw;max-width:1120px;margin:auto}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center}
+.tag{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:99px;font-size:13px;color:var(--mut);width:max-content;max-width:100%}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--b);box-shadow:0 0 12px var(--b);animation:p 2s infinite}
+@keyframes p{50%{opacity:.3}}
+h1{font-size:clamp(40px,8vw,92px);line-height:1.02;margin:22px 0}
+.grad{background:linear-gradient(100deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:g 8s linear infinite}
+@keyframes g{to{background-position:300% 0}}
+.lead{max-width:620px;color:var(--mut);font-size:19px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:13px 24px;border-radius:99px;text-decoration:none;font-weight:500;border:1px solid var(--line);color:var(--fg);transition:transform .25s,box-shadow .25s}
+.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#07070d;border:0}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px -8px var(--a)}
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;position:relative;z-index:1;white-space:nowrap}
+.marq div{display:inline-block;animation:m 28s linear infinite;font-family:'Space Grotesk';font-size:22px;color:var(--mut)}
+.marq span{margin:0 26px}.marq b{color:var(--b);font-weight:400}
+@keyframes m{to{transform:translateX(-50%)}}
+h2{font-size:clamp(30px,5vw,52px);margin-bottom:12px}
+.sub{color:var(--mut);margin-bottom:40px;max-width:600px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;overflow:hidden;transition:transform .35s,border-color .35s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--a) 22%,transparent),transparent 60%);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--a)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.num{font-family:'Space Grotesk';color:var(--b);font-size:13px;letter-spacing:.14em}
+.card h3{font-size:23px;margin:8px 0 10px}
+.card p{color:var(--mut);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-size:12px;padding:4px 11px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
+.skills .card h3{font-size:18px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
+@media(max-width:760px){.about{grid-template-columns:1fr}nav{gap:10px}nav div{overflow-x:auto;white-space:nowrap;max-width:75%;scrollbar-width:none}nav a{margin-left:16px}section{padding:72px 5vw}}
+.stat{display:flex;gap:14px;flex-wrap:wrap}
+.stat div{flex:1;min-width:120px;border:1px solid var(--line);border-radius:18px;padding:20px;background:var(--card)}
+.stat b{display:block;font:700 34px 'Space Grotesk';color:var(--a)}
+.stat small{color:var(--mut)}
+.tl{border-left:1px solid var(--line);padding-left:26px}
+.tl div{margin-bottom:28px;position:relative}
+.tl div::before{content:"";position:absolute;left:-32px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--b);box-shadow:0 0 14px var(--b)}
+.tl small{color:var(--mut)}
+.contact{text-align:center}
+.contact h2{font-size:clamp(34px,7vw,76px)}
+.contact .cta{justify-content:center}
+footer{text-align:center;color:var(--mut);padding:30px 5vw 50px;font-size:13px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:10}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.card .chips span{transition:color .25s,border-color .25s}.card:hover .chips span{color:var(--fg);border-color:var(--a)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="net"></canvas><div id="glow"></div><div id="bar"></div>
+<nav><a class="logo" href="#top">MA.</a><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#edu">Education</a><a href="#contact">Contact</a></div></nav>
+<header id="top"><section class="hero">
+<span class="tag"><i></i>Mohammed Arshid · Open to Data Science &amp; AI roles</span>
+<h1>Hi, I’m Arshid.<br>I turn data into <span class="grad" id="type">intelligence.</span></h1>
+<p class="lead">Data scientist (fresher) from Malappuram, Kerala, building machine learning, NLP and Generative AI applications with Python, from RAG chatbots to AI resume analyzers.</p>
+<div class="cta"><a class="btn p" href="#work">View projects</a><a class="btn" href="#contact">Get in touch</a><a class="btn" href="https://www.linkedin.com/in/mohammed-arshid-1367aa384" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/mohdarshid1123" target="_blank" rel="noopener">GitHub</a></div>
+</section></header>
+<div class="marq"><div id="mq"></div></div>
+<main>
+<section id="about" class="rv"><div class="about"><div><h2>About me</h2>
+<p class="sub" style="max-width:none">I’m a data scientist (fresher) with a BCA from Calicut University (2026) and a Data Science with Generative AI program from Zoople Technologies, with hands-on experience across data cleaning, exploratory analysis, feature engineering and model evaluation. I enjoy the full loop of a data project: framing the problem, preparing data, building and evaluating models, and wrapping them in something people can actually use, like an API or a chatbot. I’m looking for a Junior Data Scientist or AI/ML role where I can learn fast and contribute to real products.</p></div>
+<div class="stat"><div><b>8</b><small>Projects built</small></div><div><b>6</b><small>Certifications</small></div><div><b>GenAI</b><small>RAG · LLMs · NLP</small></div></div></div></section>
+
+<section id="skills" class="skills rv"><h2>Toolkit</h2><p class="sub">The languages, libraries and tools I work with.</p>
+<div class="grid">
+<div class="card"><span class="num">01</span><h3>Programming</h3><div class="chips"><span>Python</span><span>SQL</span></div></div>
+<div class="card"><span class="num">02</span><h3>Data Analysis &amp; Statistics</h3><div class="chips"><span>Pandas</span><span>NumPy</span><span>Data Cleaning</span><span>EDA</span><span>Feature Engineering</span><span>Data Visualization</span><span>Statistical Analysis</span></div></div>
+<div class="card"><span class="num">03</span><h3>Machine Learning</h3><div class="chips"><span>Scikit-learn</span><span>Supervised &amp; Unsupervised</span><span>Classification</span><span>Regression</span><span>Clustering</span><span>Cross-Validation</span><span>Hyperparameter Tuning</span></div></div>
+<div class="card"><span class="num">04</span><h3>ML Algorithms</h3><div class="chips"><span>Linear &amp; Logistic Regression</span><span>Decision Trees</span><span>Random Forest</span><span>KNN</span><span>SVM</span><span>K-Means</span></div></div>
+<div class="card"><span class="num">05</span><h3>Deep Learning &amp; Generative AI</h3><div class="chips"><span>Neural Networks</span><span>CNNs</span><span>NLP</span><span>Transformers</span><span>LLMs</span><span>Prompt Engineering</span><span>RAG</span><span>Embeddings</span><span>Hugging Face</span><span>LangChain</span><span>Vector Databases</span></div></div>
+<div class="card"><span class="num">06</span><h3>Tools &amp; Deployment</h3><div class="chips"><span>Jupyter Notebook</span><span>Git</span><span>GitHub</span><span>FastAPI</span><span>Streamlit</span></div></div>
+</div></section>
+
+<section id="work" class="rv"><h2>Projects</h2><p class="sub">Hands-on builds across Generative AI, NLP and computer vision.</p>
+<div class="grid">
+<div class="card"><span class="num">PROJECT 01</span><h3>AI Resume Cleaner &amp; Analyzer</h3><p>Analyzes resume text for grammar issues, repetitive content, weak descriptions and formatting inconsistencies, using carefully designed prompts and structured outputs to return consistent improvement suggestions. Exposed through a FastAPI backend with REST endpoints.</p><div class="chips"><span>Python</span><span>NLP</span><span>LLMs</span><span>Generative AI</span><span>FastAPI</span></div></div>
+<div class="card"><span class="num">PROJECT 02</span><h3>RAG-Based AI Chatbot</h3><p>Answers questions over custom, unstructured knowledge sources. Includes a document ingestion and preprocessing pipeline, embeddings, semantic similarity search over a vector database, and LLM answers served through FastAPI, with retrieval and response quality evaluated.</p><div class="chips"><span>Python</span><span>LangChain</span><span>Hugging Face</span><span>Vector DB</span><span>FastAPI</span></div></div>
+<div class="card"><span class="num">PROJECT 03</span><h3>Drug Prediction System</h3><p>Predicts suitable medications from patient health attributes and medical data. Covers data preprocessing, exploratory data analysis, feature selection and model training to support data-driven healthcare decisions.</p><div class="chips"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Matplotlib</span></div></div>
+<div class="card"><span class="num">PROJECT 04</span><h3>AI Photo Editor</h3><p>An AI-powered image editing application combining computer vision, image processing and Generative AI for intelligent enhancement and modification, automating the workflow from user image to edited output.</p><div class="chips"><span>Python</span><span>Generative AI</span><span>Computer Vision</span><span>Image Processing</span></div></div>
+<div class="card"><span class="num">PROJECT 05</span><h3>Blockchain-Based Voting System</h3><p>A voting platform with Solidity smart contracts enforcing voter registration, authentication and one-person-one-vote rules, with automated tallying and a transparent, auditable record using cryptographic techniques.</p><div class="chips"><span>Blockchain</span><span>Solidity</span><span>Smart Contracts</span><span>Cryptography</span></div></div>
+<div class="card"><span class="num">PROJECT 06</span><h3>ClinicalRAG</h3><p>A retrieval-augmented generation system for the clinical domain that grounds LLM answers in retrieved documents.</p><div class="chips"><span>RAG</span><span>LLMs</span><span>Generative AI</span></div></div>
+<div class="card"><span class="num">PROJECT 07</span><h3>Thai Cuisine RAG Assistant</h3><p>A conversational assistant that retrieves relevant knowledge and uses an LLM to answer questions about Thai cuisine.</p><div class="chips"><span>RAG</span><span>GenAI</span><span>LLM</span></div></div>
+<div class="card"><span class="num">PROJECT 08</span><h3>Face Mask Detection</h3><p>A deep learning computer-vision system that detects whether a person is wearing a face mask.</p><div class="chips"><span>Deep Learning</span><span>Computer Vision</span></div></div>
+</div></section>
+
+<section id="edu" class="rv"><h2>Education</h2><p class="sub">Where I’ve learned and where I’m growing.</p>
+<div class="tl">
+<div><h3>Data Science with Generative AI</h3><small>Zoople Technologies, Calicut · May to November 2026</small></div>
+<div><h3>Bachelor of Computer Applications (BCA), 2026</h3><small>Calicut University · MES Arts and Science College, Kuttippuram</small></div>
+</div>
+<h3 style="margin:40px 0 4px">Certifications</h3><div class="chips"><span>AWS Cloud Practitioner Essentials · AWS</span><span>Getting Started with Generative AI · IBM</span><span>Make Agentic AI Work for You · IBM</span><span>100 Days of Code: Python Pro Bootcamp · Udemy</span><span>AI Tools Workshop · BE10X</span><span>Data Science with Generative AI · Zoople Technologies</span></div></section>
+
+<section id="contact" class="contact rv"><h2>Let’s build something <span class="grad">intelligent.</span></h2><p class="sub" style="margin:0 auto 10px">I’m open to Junior Data Scientist and AI/ML roles, and happy to relocate.</p>
+<div class="cta"><a class="btn p" href="https://wa.me/917994748086" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="mailto:mohdarshid1123@gmail.com">mohdarshid1123@gmail.com</a><a class="btn" href="tel:+917994748086">+91 79947 48086</a><a class="btn" href="https://www.linkedin.com/in/mohammed-arshid-1367aa384" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/mohdarshid1123" target="_blank" rel="noopener">GitHub</a></div></section>
+</main>
+<footer>© 2026 Mohammed Arshid · Malappuram, Kerala</footer>
+<script>
+(function(){
+var words=['intelligence.','insights.','AI products.','decisions.'],el=document.getElementById('type'),wi=0,ci=words[0].length,del=true;
+function tick(){var w=words[wi];if(del){ci--;if(ci<=0){del=false;wi=(wi+1)%words.length}}else{ci++;if(ci>=words[wi].length){del=true;setTimeout(tick,1800);return}}el.textContent=words[wi].slice(0,Math.max(ci,0))||'\u200b';setTimeout(tick,del?45:90)}
+setTimeout(tick,2200);
+var items=['Python','Machine Learning','Deep Learning','Generative AI','RAG','NLP','Computer Vision','SQL','TensorFlow'],h='';
+for(var k=0;k<4;k++)items.forEach(function(t){h+='<span>'+t+'</span><b>✦</b>'});
+document.getElementById('mq').innerHTML=h;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.05});
+document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
+var g=document.getElementById('glow'),bar=document.getElementById('bar');
+addEventListener('scroll',function(){var m=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(m>0?Math.min(scrollY/m,1):0)+')'},{passive:true});
+addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+var cv=document.getElementById('net'),x=cv.getContext('2d'),W,H,P=[],mouse={x:-999,y:-999};
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=[];var n=Math.min(70,Math.floor(W*H/22000));for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})}
+rs();addEventListener('resize',rs);addEventListener('pointermove',function(e){mouse.x=e.clientX;mouse.y=e.clientY});
+function col(){return getComputedStyle(document.documentElement).getPropertyValue('--a').trim()||'#8b7bff'}
+function draw(){x.clearRect(0,0,W,H);var c=col();x.fillStyle=c;
+for(var i=0;i<P.length;i++){var p=P[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+x.globalAlpha=.8;x.beginPath();x.arc(p.x,p.y,1.6,0,6.3);x.fill();
+for(var j=i+1;j<P.length;j++){var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){x.globalAlpha=(1-d/130)*.35;x.strokeStyle=c;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+var dm=Math.hypot(p.x-mouse.x,p.y-mouse.y);if(dm<170){x.globalAlpha=(1-dm/170)*.6;x.strokeStyle=c;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(mouse.x,mouse.y);x.stroke()}}
+requestAnimationFrame(draw)}
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)draw();
+})();
+</script>
+</body>
+</html>
